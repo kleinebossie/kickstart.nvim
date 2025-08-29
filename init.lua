@@ -228,6 +228,19 @@ vim.keymap.set('n', '<leader>sl', function()
   vim.cmd '!cp ~/.stylelintrc.json .'
 end, { desc = 'Copy .stylelint.json to current directory' })
 
+vim.keymap.set('n', '<leader>js', function()
+  vim.cmd '!cp ~/jsconfig.json .'
+end, { desc = 'Copy jsconfig.json to current directory' })
+
+vim.keymap.set('n', '<leader>ts', function()
+  vim.cmd '!cp ~/tsconfig.json .'
+end, { desc = 'Copy tsconfig.json to current directory' })
+
+vim.cmd 'set expandtab'
+vim.cmd 'set tabstop=2'
+vim.cmd 'set softtabstop=2'
+vim.cmd 'set shiftwidth=2'
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -995,7 +1008,7 @@ require('lazy').setup({
       ---@diagnostic disable-next-line: missing-fields
       require('tokyonight').setup {
         styles = {
-          comments = { italic = false }, -- Disable italics in comments
+          comments = { italic = true }, -- Disable italics in comments
         },
       }
 
